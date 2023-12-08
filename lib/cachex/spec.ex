@@ -362,7 +362,7 @@ defmodule Cachex.Spec do
         do: [
           keypos: 2,
           read_concurrency: true,
-          write_concurrency: true
+          write_concurrency: :auto
         ]
       )
 

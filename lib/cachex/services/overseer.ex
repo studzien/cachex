@@ -38,7 +38,7 @@ defmodule Cachex.Services.Overseer do
   """
   @spec start_link :: Supervisor.on_start()
   def start_link do
-    ets_opts = [read_concurrency: true, write_concurrency: true]
+    ets_opts = [read_concurrency: true, write_concurrency: :auto]
     tab_opts = [@table_name, ets_opts, [quiet: true]]
     mgr_opts = [1, [name: @manager_name]]
 

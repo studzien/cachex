@@ -36,7 +36,7 @@ defmodule Cachex.SpecTest do
     assert const(:table_options) == [
              keypos: 2,
              read_concurrency: true,
-             write_concurrency: true
+             write_concurrency: :auto
            ]
   end
 

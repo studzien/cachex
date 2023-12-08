@@ -39,7 +39,7 @@ defmodule Cachex.Services.Locksmith do
   def start_link do
     Eternal.start_link(
       @table_name,
-      [read_concurrency: true, write_concurrency: true],
+      [read_concurrency: true, write_concurrency: :auto],
       quiet: true
     )
   end
